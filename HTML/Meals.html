@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>الوجبات</title>
+
+<link rel="stylesheet" href="../CSS/Style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../JS/myFunctions.js" defer></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <a href="index.html" class="main-header__brand">
+            <img src="../IMG'S/SAKAFOOD.png" alt="SakaFOOD Logo">
+        </a>
+
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a href="../HTML/index.Html">Home</a></li>
+                <li class="main-nav__item"><a href="../HTML/Aboutus.HTML">About Us</a></li>
+                <li class="main-nav__item main-nav__item--cta"><a href="../HTML/Meals.html">Meals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<h1>قائمة الوجبات</h1>
+
+    <table id="mealsTable" class="meals-table">
+        <thead>
+            <tr>
+                <th>الرمز</th>
+                <th>العنوان</th>
+                <th>السعر (ل.س)</th>
+                <th>إظهار التفاصيل</th>
+                <th>اختيار</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr data-id="SF-001" data-name="سمك مشوي" data-price="110000" 
+                data-details="المطبخ: مصري<br>التصنيف: مأكولات بحرية<br>المكونات: 4 سمكات بوري، أوريجانو، ملح، فلفل<br>الصلصة: زيت زيتون، ثوم، فلفل أحمر، طماطم">
+                <td>SF-001</td>
+                <td>سمك مشوي</td>
+                <td>110,000</td>
+                <td><button class="btn btn-details">إظهار التفاصيل</button></td>
+                <td><button class="btn btn-add">اختيار</button></td>
+            </tr>
+
+            <tr data-id="SF-002" data-name="دجاج مشوي بالأعشاب" data-price="95000"
+                data-details="المطبخ: عالمي<br>التصنيف: دجاج<br>المكونات: صدر دجاج، روزماري، زعتر، ثوم، زيت زيتون<br>الصلصة: عصير ليمون، خردل ديجون، عسل">
+                <td>SF-002</td>
+                <td>دجاج مشوي بالأعشاب</td>
+                <td>95,000</td>
+                <td><button class="btn btn-details">إظهار التفاصيل</button></td>
+                <td><button class="btn btn-add">اختيار</button></td>
+            </tr>
+
+            
+            <tr data-id="SF-003" data-name="معكرونة بالبيستو" data-price="70000"
+                data-details="المطبخ: إيطالي<br>التصنيف: معكرونة<br>المكونات: معكرونة، صلصة بيستو، طماطم كرزية، صنوبر<br>إضافات: جبنة بارميزان، ريحان طازج">
+                <td>SF-003</td>
+                <td>معكرونة بالبيستو</td>
+                <td>70,000</td>
+                <td><button class="btn btn-details">إظهار التفاصيل</button></td>
+                <td><button class="btn btn-add">اختيار</button></td>
+            </tr>
+
+            
+            <tr data-id="SF-004" data-name="سلطة الكينوا" data-price="60000"
+                data-details="المطبخ: صحي<br>التصنيف: سلطات<br>المكونات: كينوا مطبوخة، خيار، طماطم، فلفل رومي، بقدونس<br>الصوص: زيت زيتون، عصير ليمون، ملح وفلفل">
+                <td>SF-004</td>
+                <td>سلطة الكينوا بالخضروات</td>
+                <td>60,000</td>
+                <td><button class="btn btn-details">إظهار التفاصيل</button></td>
+                <td><button class="btn btn-add">اختيار</button></td>
+            </tr>
+
+            
+            <tr data-id="SF-005" data-name="طاجن لحم بالبرقوق" data-price="130000"
+                data-details="المطبخ: مغربي<br>التصنيف: طواجن<br>المكونات: لحم غنم، بصل، برقوق مجفف، لوز، بهارات مغربية<br>يقدم مع: كسكسي، خبز مغربي">
+                <td>SF-005</td>
+                <td>طاجن لحم بالبرقوق</td>
+                <td>130,000</td>
+                <td><button class="btn btn-details">إظهار التفاصيل</button></td>
+                <td><button class="btn btn-add">اختيار</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- نموذج الحجز (كما هو مطلوب في الصفحة 4) -->
+    <div class="booking-section">
+        <h2>متابعة الطلب</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">الاسم (English Only):</label>
+                <input type="text" id="name" placeholder="Enter your full name in English">
+            </div>
+
+            <div class="form-group">
+                <label for="account">رقم الحساب المصرفي (6 خانات):</label>
+                <input type="text" id="account" placeholder="مثال: 055555">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">تاريخ الميلاد:</label>
+                <input type="date" id="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">رقم الموبايل (Syriatel/MTN):</label>
+                <input type="tel" id="phone" placeholder="مثال: 0912345678">
+            </div>
+
+            <button type="submit" class="btn btn-submit">إرسال</button>
+        </form>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
